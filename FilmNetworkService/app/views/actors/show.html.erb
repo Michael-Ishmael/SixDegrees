@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Actor:</b>
+  <%= @actor.actor_id %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @actor.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @actor.last_name %>
+</p>
+
+<p>
+  <b>Film count:</b>
+  <%= link_to @actor.film_count, :controller => "films",:action => "actor_films", :actor_id => @actor.actor_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>

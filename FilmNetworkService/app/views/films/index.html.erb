@@ -5,6 +5,7 @@
     <th>Film</th>
     <th>Title</th>
     <th>Description</th>
+    <th>Size of Cast</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= film.film_id %></td>
     <td><%= film.title %></td>
     <td><%= film.description %></td>
+    <td><%= link_to film.actor_count, :controller => "actors",:action => "film_actors", :film_id => film.film_id %></td>
     <td><%= link_to 'Show', film %></td>
     <td><%= link_to 'Edit', edit_film_path(film) %></td>
     <td><%= link_to 'Destroy', film, confirm: 'Are you sure?', method: :delete %></td>

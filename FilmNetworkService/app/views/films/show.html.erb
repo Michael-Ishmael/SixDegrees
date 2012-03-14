@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Film:</b>
+  <%= @film.film_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @film.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @film.description %>
+</p>
+
+<p>
+  <b>Size of cast:</b>
+  <%= link_to @film.actor_count, :controller => "actors",:action => "film_actors", :film_id => @film.film_id %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_film_path(@film) %> |
+<%= link_to 'Back', films_path %>

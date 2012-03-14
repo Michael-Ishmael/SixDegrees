@@ -1,5 +1,17 @@
 FilmNetworkService::Application.routes.draw do
-  resources :actors
+
+  resources :films do
+    collection do
+      get "actor_films"
+    end
+  end
+
+  resources :actors do
+    collection do
+      get "film_actors"
+    end
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
