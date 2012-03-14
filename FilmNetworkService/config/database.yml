@@ -14,7 +14,7 @@ development:
   reconnect: false
   database: Salika
   pool: 5
-  username: root
+  username: 3675wc2E8AA
   password:
   socket: /tmp/mysql.sock
 
